@@ -13,12 +13,9 @@ class Program
         Console.WriteLine("Ingrese otro número:");
         num2 = Console.ReadLine();
 
-        if (!int.TryParse(num1, out n1) || !int.TryParse(num2, out n2))
-        {
-            Console.WriteLine("Error: uno o ambos valores no son números válidos.");
-            return;
-        }
-
+        int.TryParse(num1, out n1);  
+        int.TryParse(num2, out n2);
+        
         string eleccion;
 
         do
@@ -32,12 +29,8 @@ class Program
             eleccion = Console.ReadLine();
 
             int opcion;
-            if (!int.TryParse(eleccion, out opcion))
-            {
-                Console.WriteLine("Opción inválida. Intenta de nuevo.");
-                continue;
-            }
-
+            int.TryParse(eleccion, out opcion);
+            
             switch (opcion)
             {
                 case 1:
